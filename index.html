@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Algorithms Visualization</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sorting Algorithms Visualizer</h1>
+      <canvas id="myCanvas" width="1200" height="400">
+        This is my canvas
+      </canvas>
+      <div class="btn-container">
+        <button class="btn" id="newArray">Generate New Array</button>
+
+        <select name="Algorithms" id="algo" class="btn">
+          <option value="Heap">Heap Sort -- O(Nlog(N))</option>
+          <option value="Quick">Quick Sort -- O(Nlog(N))</option>
+          <option value="Insertion">Insertion Sort -- O(N^2)</option>
+          <option value="Bubble">Bubble Sort -- O(N^2)</option>
+        </select>
+
+        <button id="sort" class="btn">Sort</button>
+      </div>
+
+      <div class="btn">
+        <p>Array Size</p>
+        <input
+          type="range"
+          min="20"
+          max="200"
+          value="50"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+
+      <p id="timer">Timer: <span id="time"></span></p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
